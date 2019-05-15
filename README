@@ -1,5 +1,5 @@
 = Reminder to compile using compiling tools in Linux
-
+cuocou
 Let us suppose you have a command line opened in the directory 01_minimal_window/
 
 == Using CMake (in command line)
