@@ -1,3 +1,4 @@
 cmake/*
 precompiled/*
 external/*
+.vscode/*
