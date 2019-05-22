@@ -5,9 +5,17 @@
 #ifdef INF443_0P_CRAZYPLANETS
 
 // Stores some parameters that can be set from the GUI
+// Stores some parameters that can be set from the GUI
 struct gui_scene_structure
 {
-    bool wireframe;
+    bool wireframe = false;
+
+    float height = 3.0f;
+    float radius = 10.0f;
+    int octave = 7;
+    float persistency = 0.4f;
+    float freq_gain = 2;
+    int precision = 20;
 };
 
 struct scene_exercise : base_scene_exercise
@@ -44,6 +52,7 @@ struct scene_exercise : base_scene_exercise
 
     void update_tree_position(std::vector<struct colline> collines);
     vcl::mesh create_terrain();
+    void update_terrain();
 
 };
 

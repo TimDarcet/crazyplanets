@@ -30,7 +30,7 @@ vec3 brown = {0.25f,0.1f,0.1f};
 void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure& scene, gui_structure& )
 {
     // Create visual terrain surface
-    Planet p(5, 10.0f, 15);
+    Planet p(0.01, 10.0f, 100);
     terrain = p.planet_gpu;
     terrain.uniform_parameter.color = green;
     terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
@@ -52,7 +52,7 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
     scene.camera.apply_rotation(0,0,0,1.2f);
 
 }
-
+INF443_0P_CRAZYPLANETS
 void scene_exercise::update_tree_position(std::vector<struct colline> collines){
   std::uniform_int_distribution<int> uni(40, 250);
   int n_tree = uni(generator);
@@ -255,12 +255,49 @@ mesh create_tree()
     return cyl;
 }
 
+void scene_exercise::update_terrain() {
+  Planet p(gui_scene.height, gui_scene.radius, gui_scene.precision, gui_scene.octave, gui_scene.persistency, gui_scene.freq_gain);
+  terrain = p.planet_gpu;
+}
+
 void scene_exercise::set_gui()
 {
     ImGui::Checkbox("Wireframe", &gui_scene.wireframe);
+    
+    float radius_min = 0.1f;
+    float radius_max = 10.0f;
+    if( ImGui::SliderScalar("Radius", ImGuiDataType_Float, &gui_scene.radius, &radius_min, &radius_max) )
+        update_terrain();
+
+    int precision_min = 5;
+    int precision_max = 100;
+    if( ImGui::SliderScalar("precision", ImGuiDataType_Float, &gui_scene.precision, &precision_min, &precision_max) )
+        update_terrain();
+    
+    ImGui::Separator();
+    ImGui::Text("Perlin parameters");
+
+    float height_min = 0.1f;
+    float height_max = 2.0f;
+    if( ImGui::SliderScalar("Height", ImGuiDataType_Float, &gui_scene.height, &height_min, &height_max) )
+        update_terrain();
+
+    int octave_min = 1;
+    int octave_max = 10;
+    if( ImGui::SliderScalar("Octave", ImGuiDataType_S32, &gui_scene.octave, &octave_min, &octave_max) )
+        update_terrain();
+
+    float persistency_min = 0.1f;
+    float persistency_max = 0.9f;
+    if( ImGui::SliderScalar("Persistency", ImGuiDataType_Float, &gui_scene.persistency, &persistency_min, &persistency_max) )
+        update_terrain();
+
+    float freq_gain_min = 0.1f;
+    float freq_gain_max = 5.0f;
+    if( ImGui::SliderScalar("Frequency gain", ImGuiDataType_Float, &gui_scene.freq_gain, &freq_gain_min, &freq_gain_max) )
+        update_terrain();
 }
 
 
 
 #endif
-constructor

@@ -8,5 +8,5 @@
 class Planet {
   public:
     vcl::mesh_drawable planet_gpu;
-    Planet(int roughness, float radius, int precision);
+    Planet(float roughness, float radius, int precision, int octave=5, float persistency=3, float freq_gain=2);
 };

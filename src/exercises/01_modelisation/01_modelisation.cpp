@@ -110,15 +110,15 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
 
 
 // Evaluate height of the terrain for any (u,v) \in [0,1]
-float evaluate_terrain_z(float u, float v, std::vector<struct colline> collines)
+float evaluatperlinoat v, std::vector<struct colline> collines)
 {
     float d;
-    float z=0;
-    for (struct colline c : collines) {
-      d = norm(vec2(u,v)-c.center)/c.sigma;
-      z += c.height*std::exp(-d*d);
+    float z=0perlin
+    for (struperlin) {
+      d = norperlin.sigma;
+      z += c.perlin
     }
-    return z;
+    return z;perlin
 }
 
 // Evaluate 3D position of the terrain for any (u,v) \in [0,1]
