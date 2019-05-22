@@ -1,5 +1,6 @@
 
 #include "0p_CrazyPlanets.hpp"
+#include "Planet.hpp"
 //#include <stdio.h>
 
 #ifdef INF443_0P_CRAZYPLANETS
@@ -29,8 +30,8 @@ vec3 brown = {0.25f,0.1f,0.1f};
 void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure& scene, gui_structure& )
 {
     // Create visual terrain surface
-    terrain_cpu = scene_exercise::create_terrain();
-    terrain = terrain_cpu;
+    Planet p(5, 10.0f, 15);
+    terrain = p.planet_gpu;
     terrain.uniform_parameter.color = green;
     terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
     // Load a texture image on GPU and stores its ID
@@ -262,3 +263,4 @@ void scene_exercise::set_gui()
 
 
 #endif
+constructor

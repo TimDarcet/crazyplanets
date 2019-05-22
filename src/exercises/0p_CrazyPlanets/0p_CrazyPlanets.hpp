@@ -53,6 +53,8 @@ struct colline {
   float sigma;
 };
 
+
+
 vcl::mesh create_tree();
 vcl::mesh create_tree_foliage(float radius, float height, float z_offset, float startHeight);
 vcl::mesh create_cone(float radius, float height, float z_offset);
