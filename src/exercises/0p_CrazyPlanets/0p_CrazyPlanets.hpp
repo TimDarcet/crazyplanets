@@ -15,7 +15,7 @@ struct gui_scene_structure
     int octave = 7;
     float persistency = 0.4f;
     float freq_gain = 2;
-    int precision = 20;
+    int precision = 100;
 };
 
 struct scene_exercise : base_scene_exercise

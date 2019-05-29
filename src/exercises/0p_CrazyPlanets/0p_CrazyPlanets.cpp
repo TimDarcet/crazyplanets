@@ -30,7 +30,7 @@ vec3 brown = {0.25f,0.1f,0.1f};
 void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure& scene, gui_structure& )
 {
     // Create visual terrain surface
-    Planet p(0.01, 10.0f, 100);
+    Planet p(3.0f, 10.0f, 7, 0.4f, 2, 100);
     terrain = p.planet_gpu;
     terrain.uniform_parameter.color = green;
     terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
@@ -179,7 +179,8 @@ mesh scene_exercise::create_terrain()
     }
 
 
-    // Generate triangle organization
+    // Generate triangle organization    terrain.uniform_parameter.color = green;
+
     //  Parametric surface with uniform grid sampling: generate 2 triangles for each grid cell
     const unsigned int Ns = N;
     for(unsigned int ku=0; ku<Ns-1; ++ku)
@@ -256,8 +257,9 @@ mesh create_tree()
 }
 
 void scene_exercise::update_terrain() {
-  Planet p(gui_scene.height, gui_scene.radius, gui_scene.precision, gui_scene.octave, gui_scene.persistency, gui_scene.freq_gain);
+  Planet p(gui_scene.height, gui_scene.radius, gui_scene.octave, gui_scene.persistency, gui_scene.freq_gain, gui_scene.precision);
   terrain = p.planet_gpu;
+  terrain.uniform_parameter.color = green;
 }
 
 void scene_exercise::set_gui()
