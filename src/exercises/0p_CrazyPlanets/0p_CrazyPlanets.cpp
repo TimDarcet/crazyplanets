@@ -272,8 +272,8 @@ void scene_exercise::set_gui()
         update_terrain();
 
     int precision_min = 5;
-    int precision_max = 100;
-    if( ImGui::SliderScalar("precision", ImGuiDataType_Float, &gui_scene.precision, &precision_min, &precision_max) )
+    int precision_max = 300;
+    if( ImGui::SliderScalar("precision", ImGuiDataType_S32, &gui_scene.precision, &precision_min, &precision_max) )
         update_terrain();
     
     ImGui::Separator();
