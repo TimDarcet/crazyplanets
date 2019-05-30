@@ -1,7 +1,6 @@
 #include "Planet.hpp"
 
 Planet::Planet(float height, float radius, int octave, float persistency, float freq_gain, int precision) {
-    vcl::mesh planet_cpu; // temporary planet storage (CPU only)
     for( size_t ku=0; ku<precision; ++ku ) {
         for( size_t kv=0; kv<precision; ++kv ) {
             const float u = static_cast<float>(ku)/static_cast<float>(precision-1);
@@ -28,5 +27,9 @@ Planet::Planet(float height, float radius, int octave, float persistency, float 
     }
 
     planet_cpu.connectivity = vcl::connectivity_grid(precision, precision, false, true);
-    planet_gpu = planet_cpu;
+}
+
+vcl::mesh_drawable Planet::planet_gpu() {
+    vcl::mesh_drawable p_gpu = planet_cpu;
+    return p_gpu;
 }

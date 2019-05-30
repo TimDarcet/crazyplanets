@@ -31,11 +31,12 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
 {
     // Create visual terrain surface
     Planet p(3.0f, 10.0f, 7, 0.4f, 2, 100);
-    terrain = p.planet_gpu;
-    terrain.uniform_parameter.color = green;
+    p.planet_cpu.texture_uv = {{0,1}, {1,1}, {1,0}, {0,0}};
+    terrain = p.planet_gpu();
+    // terrain.uniform_parameter.color = green;
     terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
     // Load a texture image on GPU and stores its ID
-    texture_id = texture_gpu( image_load_png("data/grass.png") );
+    texture_id = texture_gpu(image_load_png("data/grass.png"));
 
 
     for (vcl::vec3 tp : tree_position) {
@@ -52,7 +53,7 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
     scene.camera.apply_rotation(0,0,0,1.2f);
 
 }
-INF443_0P_CRAZYPLANETS
+
 void scene_exercise::update_tree_position(std::vector<struct colline> collines){
   std::uniform_int_distribution<int> uni(40, 250);
   int n_tree = uni(generator);
@@ -258,8 +259,8 @@ mesh create_tree()
 
 void scene_exercise::update_terrain() {
   Planet p(gui_scene.height, gui_scene.radius, gui_scene.octave, gui_scene.persistency, gui_scene.freq_gain, gui_scene.precision);
-  terrain = p.planet_gpu;
-  terrain.uniform_parameter.color = green;
+  terrain = p.planet_gpu();
+  // terrain.uniform_parameter.color = green;
 }
 
 void scene_exercise::set_gui()
