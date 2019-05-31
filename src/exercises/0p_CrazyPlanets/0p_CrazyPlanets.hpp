@@ -9,13 +9,14 @@
 struct gui_scene_structure
 {
     bool wireframe = false;
+    bool skybox = true;
+    int precision = 300;
 
     float height = 3.0f;
     float radius = 10.0f;
     int octave = 7;
     float persistency = 0.4f;
     float freq_gain = 2;
-    int precision = 300;
 };
 
 struct scene_exercise : base_scene_exercise
@@ -41,6 +42,7 @@ struct scene_exercise : base_scene_exercise
     vcl::mesh_drawable terrain;
     vcl::mesh terrain_cpu;
     GLuint texture_id;
+    GLuint texture_skybox;
 
 
 
@@ -49,10 +51,12 @@ struct scene_exercise : base_scene_exercise
     std::vector<vcl::vec3> tree_position;
 
     std::vector<vcl::mesh_drawable> trees;
+    vcl::mesh_drawable skybox;
 
     void update_tree_position(std::vector<struct colline> collines);
     vcl::mesh create_terrain();
     void update_terrain();
+    void display_skybox(std::map<std::string,GLuint>& shaders, scene_structure& scene);
 
 };
 

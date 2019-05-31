@@ -1,6 +1,7 @@
 
 #include "0p_CrazyPlanets.hpp"
 #include "Planet.hpp"
+#include "skybox.hpp"
 //#include <stdio.h>
 
 #ifdef INF443_0P_CRAZYPLANETS
@@ -30,10 +31,7 @@ vec3 brown = {0.25f,0.1f,0.1f};
 void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure& scene, gui_structure& )
 {
     // Create visual terrain surface
-    Planet p(3.0f, 10.0f, 7, 0.4f, 2, 100);
-    p.planet_cpu.texture_uv = {{0,1}, {1,1}, {1,0}, {0,0}};
-    terrain = p.planet_gpu();
-    // terrain.uniform_parameter.color = green;
+    update_terrain();
     terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
     // Load a texture image on GPU and stores its ID
     texture_id = texture_gpu(image_load_png("data/grass.png"));
@@ -52,6 +50,10 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
     scene.camera.scale = 10.0f;
     scene.camera.apply_rotation(0,0,0,1.2f);
 
+    skybox = create_skybox();
+    skybox.uniform_parameter.shading = {1,0,0};
+    skybox.uniform_parameter.rotation = rotation_from_axis_angle_mat3({1,0,0},-3.014f/2.0f);
+    texture_skybox = texture_gpu(image_load_png("data/space_skybox_big.png"));
 }
 
 void scene_exercise::update_tree_position(std::vector<struct colline> collines){
@@ -98,7 +100,7 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
       t.draw(shaders["mesh"], scene.camera);
     }
 
-
+    display_skybox(shaders, scene);
 
     if( gui_scene.wireframe ){ // wireframe if asked from the GUI
         glPolygonOffset( 1.0, 1.0 );
@@ -263,9 +265,24 @@ void scene_exercise::update_terrain() {
   // terrain.uniform_parameter.color = green;
 }
 
+void scene_exercise::display_skybox(std::map<std::string,GLuint>& shaders, scene_structure& scene)
+{
+    if(gui_scene.skybox)
+    {
+        glBindTexture(GL_TEXTURE_2D,texture_skybox);
+        skybox.uniform_parameter.scaling = 150.0f;
+        skybox.uniform_parameter.translation = scene.camera.camera_position() + vec3(0,0,-50.0f);
+        skybox.draw(shaders["mesh"], scene.camera);
+        glBindTexture(GL_TEXTURE_2D,scene.texture_white);
+    }
+
+}
+
+
 void scene_exercise::set_gui()
 {
     ImGui::Checkbox("Wireframe", &gui_scene.wireframe);
+    ImGui::Checkbox("Skybox", &gui_scene.skybox);
     
     float radius_min = 0.1f;
     float radius_max = 10.0f;
@@ -273,7 +290,7 @@ void scene_exercise::set_gui()
         update_terrain();
 
     int precision_min = 5;
-    int precision_max = 300;
+    int precision_max = 500;
     if( ImGui::SliderScalar("precision", ImGuiDataType_S32, &gui_scene.precision, &precision_min, &precision_max) )
         update_terrain();
     
@@ -281,7 +298,7 @@ void scene_exercise::set_gui()
     ImGui::Text("Perlin parameters");
 
     float height_min = 0.1f;
-    float height_max = 2.0f;
+    float height_max = 5.0f;
     if( ImGui::SliderScalar("Height", ImGuiDataType_Float, &gui_scene.height, &height_min, &height_max) )
         update_terrain();
 
@@ -291,12 +308,12 @@ void scene_exercise::set_gui()
         update_terrain();
 
     float persistency_min = 0.1f;
-    float persistency_max = 0.9f;
+    float persistency_max = 2.0f;
     if( ImGui::SliderScalar("Persistency", ImGuiDataType_Float, &gui_scene.persistency, &persistency_min, &persistency_max) )
         update_terrain();
 
     float freq_gain_min = 0.1f;
-    float freq_gain_max = 5.0f;
+    float freq_gain_max = 10.0f;
     if( ImGui::SliderScalar("Frequency gain", ImGuiDataType_Float, &gui_scene.freq_gain, &freq_gain_min, &freq_gain_max) )
         update_terrain();
 }
