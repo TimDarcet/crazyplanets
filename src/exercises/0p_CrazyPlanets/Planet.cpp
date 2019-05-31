@@ -1,6 +1,7 @@
 #include "Planet.hpp"
 
 Planet::Planet(float height, float radius, int octave, float persistency, float freq_gain, int precision) {
+    planet_cpu.texture_uv.resize(precision * precision);
     for( size_t ku=0; ku<precision; ++ku ) {
         for( size_t kv=0; kv<precision; ++kv ) {
             const float u = static_cast<float>(ku)/static_cast<float>(precision-1);
@@ -22,7 +23,9 @@ Planet::Planet(float height, float radius, int octave, float persistency, float 
   
             planet_cpu.position.push_back(p);
             // planet_cpu.normal.push_back(n);
-  
+
+            planet_cpu.texture_uv[kv+precision*ku] = {5*u, 5*v};
+
         }
     }
 

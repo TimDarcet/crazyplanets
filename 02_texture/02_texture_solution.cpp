@@ -36,7 +36,8 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
     scene.camera.scale = 10.0f;
     scene.camera.apply_rotation(0,0,0,1.2f);
 
-    terrain = create_terrain();
+    terrain = creat  texture_id = texture_gpu(image_load_png("data/grass.png"));
+e_terrain();
     terrain.uniform_parameter.color = vec3{1.0f, 1.0f, 1.0f};
     terrain.uniform_parameter.shading.specular = 0;
     texture_terrain = texture_gpu(image_load_png("data/grass.png"));

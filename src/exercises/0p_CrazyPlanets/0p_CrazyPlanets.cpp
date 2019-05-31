@@ -32,17 +32,15 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
 {
     // Create visual terrain surface
     update_terrain();
-    terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
-    // Load a texture image on GPU and stores its ID
     texture_id = texture_gpu(image_load_png("data/grass.png"));
+  
+    // for (vcl::vec3 tp : tree_position) {
+    //   trees.push_back(/*(vcl::mesh_drawable)*/ create_tree());
+    //   trees.back().uniform_parameter.translation += tp - vec3({0, 0, 0.1});
+    //   trees.back().uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
+    //   trees.back();
+    // }  texture_id = texture_gpu(image_load_png("data/grass.png"));
 
-
-    for (vcl::vec3 tp : tree_position) {
-      trees.push_back(/*(vcl::mesh_drawable)*/ create_tree());
-      trees.back().uniform_parameter.translation += tp - vec3({0, 0, 0.1});
-      trees.back().uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
-      trees.back();
-    }
 
 
     // Setup initial camera mode and position
@@ -86,19 +84,19 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
 
     glEnable( GL_POLYGON_OFFSET_FILL ); // avoids z-fighting when displaying wireframe
 
-    glBindTexture(GL_TEXTURE_2D, texture_id);
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
     // Display terrain
-    glPolygonOffset( 1.0, 1.0 );
+    glPolygonOffset(1.0, 1.0);
+    glBindTexture(GL_TEXTURE_2D, texture_id);
     terrain.draw(shaders["mesh"], scene.camera);
     glBindTexture(GL_TEXTURE_2D, scene.texture_white);
 
-    for (mesh_drawable t : trees) {
-      t.draw(shaders["mesh"], scene.camera);
-    }
+    // for (mesh_drawable t : trees) {
+    //   t.draw(shaders["mesh"], scene.camera);
+    // }
 
     display_skybox(shaders, scene);
 
@@ -263,6 +261,8 @@ void scene_exercise::update_terrain() {
   Planet p(gui_scene.height, gui_scene.radius, gui_scene.octave, gui_scene.persistency, gui_scene.freq_gain, gui_scene.precision);
   terrain = p.planet_gpu();
   // terrain.uniform_parameter.color = green;
+  // terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
+  // Load a texture image on GPU and stores its ID
 }
 
 void scene_exercise::display_skybox(std::map<std::string,GLuint>& shaders, scene_structure& scene)
