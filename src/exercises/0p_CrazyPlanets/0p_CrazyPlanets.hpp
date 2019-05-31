@@ -11,13 +11,14 @@ struct gui_scene_structure
 {
     bool wireframe = false;
     bool skybox = true;
-    bool swarm = true;
+    bool swarm = false;
+    bool main_planet = true;
     
     int precision = 300;
 
-    float height = 3.0f;
+    float height = 1.0f;
     float radius = 10.0f;
-    int octave = 7;
+    int octave = 4;
     float persistency = 0.4f;
     float freq_gain = 2;
 };
@@ -44,7 +45,8 @@ struct scene_exercise : base_scene_exercise
     // visual representation of a surface
     vcl::mesh_drawable terrain;
     vcl::mesh terrain_cpu;
-    GLuint texture_id;
+    GLuint asteroid_texture_id;
+    GLuint mPlanet_texture_id;
     GLuint texture_skybox;
 
 

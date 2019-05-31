@@ -25,16 +25,17 @@ vec3 green = {0.6f,0.85f,0.5f};
 vec3 brown = {0.25f,0.1f,0.1f};
 
 // Textures
-char *planet_texture = "data/asteroid.png";
+char *asteroid_texture = "data/asteroid.png";
 char *skybox_texture = "data/space_skybox_big.png";
-
+char *mPlanet_texture = "data/grass.png";
 /** This function is called before the beginning of the animation loop
     It is used to initialize all part-specific data */
 void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure& scene, gui_structure& )
 {
     // Create visual terrain surface
     update_terrain();
-    texture_id = texture_gpu(image_load_png(planet_texture));
+    asteroid_texture_id = texture_gpu(image_load_png(asteroid_texture));
+    mPlanet_texture_id = texture_gpu(image_load_png(mPlanet_texture));
   
     // for (vcl::vec3 tp : tree_position) {
     //   trees.push_back(/*(vcl::mesh_drawable)*/ create_tree());
@@ -94,10 +95,12 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
 
     // Display terrain
     glPolygonOffset(1.0, 1.0);
-    glBindTexture(GL_TEXTURE_2D, texture_id);
-    if (!gui_scene.swarm)
+    if (gui_scene.main_planet) {
+      glBindTexture(GL_TEXTURE_2D, mPlanet_texture_id);
       terrain.draw(shaders["mesh"], scene.camera);
-    else {
+    }
+    if (gui_scene.swarm){
+      glBindTexture(GL_TEXTURE_2D, asteroid_texture_id);
       for (vcl::mesh_drawable p : planets) {
         p.draw(shaders["mesh"], scene.camera);
         std::cout << p.uniform_parameter.translation << std::endl;
@@ -280,9 +283,8 @@ Planet asteroid_generator() {
 void scene_exercise::update_terrain() {
   Planet p(gui_scene.height, gui_scene.radius, gui_scene.octave, gui_scene.persistency, gui_scene.freq_gain, gui_scene.precision);
   terrain = p.planet_gpu();
-  // terrain.uniform_parameter.color = green;
-  // terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
-  // Load a texture image on GPU and stores its ID
+  terrain.uniform_parameter.color = green;
+  terrain.uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
 }
 
 void scene_exercise::display_skybox(std::map<std::string,GLuint>& shaders, scene_structure& scene)
@@ -304,8 +306,10 @@ void scene_exercise::set_gui()
     ImGui::Checkbox("Wireframe", &gui_scene.wireframe);
     ImGui::Checkbox("Skybox", &gui_scene.skybox);
     ImGui::Checkbox("Multiple planets", &gui_scene.swarm);
+    ImGui::Checkbox("Main planet", &gui_scene.main_planet);
     
-    if(!gui_scene.swarm) {
+    
+    if(gui_scene.main_planet) {
       float radius_min = 0.1f;
       float radius_max = 10.0f;
       if( ImGui::SliderScalar("Radius", ImGuiDataType_Float, &gui_scene.radius, &radius_min, &radius_max) )

@@ -47,7 +47,7 @@ vcl::mesh_drawable Planet::planet_gpu() {
 void generate_planet_positions(std::vector<vcl::vec3> &plan_pos){
   //seed rng
   srand(time(0));
-  std::uniform_int_distribution<int> uni(40, 40);
+  std::uniform_int_distribution<int> uni(40, 200);
   int n_tree = uni(generator2);
   std::cout << n_tree << " " << std::endl;
   for (int i=0; i<n_tree; i++){
