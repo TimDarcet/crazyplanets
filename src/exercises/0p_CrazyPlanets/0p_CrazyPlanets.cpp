@@ -43,13 +43,27 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
     asteroid_texture_id = texture_gpu(image_load_png(asteroid_texture));
     mPlanet_texture_id = texture_gpu(image_load_png(mPlanet_texture));
   
-    // for (vcl::vec3 tp : tree_position) {
-    //   trees.push_back(/*(vcl::mesh_drawable)*/ create_tree());
-    //   trees.back().uniform_parameter.translation += tp - vec3({0, 0, 0.1});
-    //   trees.back().uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
-    //   trees.back();
-    // }  texture_id = texture_gpu(image_load_png("data/grass.png"));
+    update_tree_position();
+    for (vcl::vec3 tp : tree_position) {
+      trees.push_back(/*(vcl::mesh_drawable)*/ create_tree());
+      trees.back().uniform_parameter.translation += tp - vec3({0, 0, 0.1});
+      trees.back().uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
+      trees.back().uniform_parameter.scaling = 10;
+      trees.back().uniform_parameter.rotation = rotation_between_vector_mat3(vec3{0,0,1}, tp);
+    }
 
+    // float shape[3];
+    // shape[0] = 0.1f;
+    // shape[1] = 0.4f;
+    // shape[2] = 0.2f;
+    // Cloud nuage(10, shape);
+    // nuage_gpu = nuage.surfaces_gpu();
+    // for (int i = 0; i < nuage.nb_surfaces; i++) {
+    //     nuage_gpu[i].uniform_parameter.shading = {1,0,0}; // set pure ambiant component (no diffuse, no specular) - allow to only see the color of the texture
+    // }
+
+    // // Load a texture (with transparent background)
+    // texture_id = texture_gpu( image_load_png("data/cloud.png") );
 
 
     // Setup initial camera mode and position
@@ -102,9 +116,9 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
     }
     glBindTexture(GL_TEXTURE_2D, scene.texture_white);
 
-    // for (mesh_drawable t : trees) {
-    //   t.draw(shaders["mesh"], scene.camera);
-    // }
+    for (mesh_drawable t : trees) {
+      t.draw(shaders["mesh"], scene.camera);
+    }
 
     display_skybox(shaders, scene);
 
@@ -117,11 +131,12 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
           t.draw(shaders["wireframe"], scene.camera);
         }
     }
+    
 }
 
 
-void scene_exercise::update_tree_position(std::vector<struct colline> collines){
-  std::uniform_int_distribution<int> uni(40, 250);
+void scene_exercise::update_tree_position(){
+  std::uniform_int_distribution<int> uni(2, 10);
   int n_tree = uni(generator);
   for (int i=0; i<n_tree; i++){
     bool ok = false;
@@ -137,7 +152,9 @@ void scene_exercise::update_tree_position(std::vector<struct colline> collines){
         }
       }*/
     }
-    scene_exercise::tree_position.push_back(evaluate_terrain(u, v, collines));
+    scene_exercise::tree_position.push_back({gui_scene.radius * std::sin(PI*u) * std::cos(2*PI*v),
+                                            gui_scene.radius * std::sin(PI*u) * std::sin(2*PI*v),
+                                            gui_scene.radius * std::cos(PI*u)});
   }
 }
 
@@ -229,7 +246,7 @@ mesh scene_exercise::create_terrain()
         }
     }
 
-    scene_exercise::update_tree_position(collines);
+    // scene_exercise::update_tree_position(collines);
 
     return terrain;
 }
@@ -346,10 +363,12 @@ void scene_exercise::display_bird(std::map<std::string,GLuint>& shaders, scene_s
     bird.draw(shaders["mesh"], scene.camera);
 }
 
+
+
 void scene_exercise::update_trajectory()
 {
     const size_t N = 12;
-    const float r = 12.0f;
+    const float r = 16.0f;
     for(size_t k=0; k<N; ++k)
     {
         const float u = k%(N-3)/(N-3.0f);

@@ -165,6 +165,7 @@ vcl::mesh_drawable_hierarchy create_bird(int precision) {
 
     hierarchy.mesh_visual("beak").uniform_parameter.color = {1,0.5f,0};
 
+    hierarchy.scaling = 6;
     return hierarchy;
 }
 

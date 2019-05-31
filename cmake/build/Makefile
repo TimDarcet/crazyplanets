@@ -717,6 +717,33 @@ home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.s:
 	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.s
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.s
 
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.o
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.o
+
+# target to build an object file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.o:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.o
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.o
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.i: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.i
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.i
+
+# target to preprocess a source file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.i:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.i
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.i
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.s: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.s
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.s
+
+# target to generate assembly for a file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.s:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.s
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp.s
+
 home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.cpp.o
 
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.o
@@ -743,6 +770,33 @@ home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.s: ho
 home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.cpp.s:
 	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.cpp.s
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.cpp.s
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.o
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.o
+
+# target to build an object file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.o:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.o
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.o
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.i: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.i
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.i
+
+# target to preprocess a source file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.i:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.i
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.i
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.s: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.s
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.s
+
+# target to generate assembly for a file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.s:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.s
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp.s
 
 home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.cpp.o
 
@@ -2007,9 +2061,15 @@ help:
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.s"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.o"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.i"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.s"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.s"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.o"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.i"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.s"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.s"

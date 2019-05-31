@@ -2,6 +2,7 @@
 
 #include "../../exercises/base_exercise/base_exercise.hpp"
 #include "Planet.hpp"
+#include "cloud.hpp"
 
 #ifdef INF443_0P_CRAZYPLANETS
 
@@ -72,11 +73,15 @@ struct scene_exercise : base_scene_exercise
     void update_trajectory();
     void update_time_trajectory();
     
-    void update_tree_position(std::vector<struct colline> collines);
+    void update_tree_position();
     vcl::mesh create_terrain();
     void update_terrain();
     void display_skybox(std::map<std::string,GLuint>& shaders, scene_structure& scene);
     vcl::timer_interval timer;
+
+    std::vector<vcl::mesh_drawable> nuage_gpu;
+    GLuint texture_id;
+    Cloud nuage;
 };
 
 struct colline {

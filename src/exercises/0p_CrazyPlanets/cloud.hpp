@@ -10,7 +10,6 @@ class Cloud
 public:
     Cloud(int _nb_surfaces, float _shape[3]);
     Cloud() = default;
-    ~Cloud();
     int nb_surfaces;
     float shape[3];
     std::vector<vcl::mesh> surfaces;

@@ -633,6 +633,8 @@ string
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
 Planet.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
+cloud.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.hpp
 
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.cpp
 Planet.hpp
@@ -664,6 +666,22 @@ string.h
 ../../exercise_current.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
 
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.cpp
+cloud.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.hpp
+random
+-
+time.h
+-
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.hpp
+../../vcl/vcl.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
+../../helper_scene.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
+../../exercise_current.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
+
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.cpp
 skybox.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.hpp
@@ -675,6 +693,18 @@ skybox.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
 ../../exercise_current.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.cpp
+test_cloud.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.hpp
+cloud.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.hpp
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/test_cloud.hpp
+../../exercises/base_exercise/base_exercise.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
+cloud.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/cloud.hpp
 
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.cpp
 base_exercise.hpp
