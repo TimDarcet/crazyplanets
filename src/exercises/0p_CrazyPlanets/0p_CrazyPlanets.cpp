@@ -20,11 +20,13 @@ std::default_random_engine generator(rd());
 float evaluate_terrain_z(float u, float v, std::vector<struct colline> collines);
 vec3 evaluate_terrain(float u, float v, std::vector<struct colline> collines);
 
-
+// Colors
 vec3 green = {0.6f,0.85f,0.5f};
 vec3 brown = {0.25f,0.1f,0.1f};
 
-
+// Textures
+char *planet_texture = "data/asteroid.png";
+char *skybox_texture = "data/space_skybox_big.png";
 
 /** This function is called before the beginning of the animation loop
     It is used to initialize all part-specific data */
@@ -32,7 +34,7 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
 {
     // Create visual terrain surface
     update_terrain();
-    texture_id = texture_gpu(image_load_png("data/grass.png"));
+    texture_id = texture_gpu(image_load_png(planet_texture));
   
     // for (vcl::vec3 tp : tree_position) {
     //   trees.push_back(/*(vcl::mesh_drawable)*/ create_tree());
@@ -51,7 +53,7 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
     skybox = create_skybox();
     skybox.uniform_parameter.shading = {1,0,0};
     skybox.uniform_parameter.rotation = rotation_from_axis_angle_mat3({1,0,0},-3.014f/2.0f);
-    texture_skybox = texture_gpu(image_load_png("data/space_skybox_big.png"));
+    texture_skybox = texture_gpu(image_load_png(skybox_texture));
 }
 
 void scene_exercise::update_tree_position(std::vector<struct colline> collines){
