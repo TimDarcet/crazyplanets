@@ -1113,6 +1113,7 @@ CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o: /home/t
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.hpp
+CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/exercises.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp

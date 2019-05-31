@@ -11,3 +11,7 @@ class Planet {
     vcl::mesh_drawable planet_gpu();
     Planet(float height, float radius, int octave=5, float persistency=3, float freq_gain=2, int precision=100);
 };
+
+void generate_planet_positions(std::vector<vcl::vec3> &plan_pos);
+
+void generate_swarm(std::vector<vcl::mesh_drawable> &plan_swarm, Planet (*planet_generator)());

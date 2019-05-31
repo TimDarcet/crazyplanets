@@ -597,10 +597,16 @@ time.h
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.hpp
 ../../exercises/base_exercise/base_exercise.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
+Planet.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
 
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.cpp
 Planet.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
+random
+-
+time.h
+-
 
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
 ../../vcl/vcl.hpp
