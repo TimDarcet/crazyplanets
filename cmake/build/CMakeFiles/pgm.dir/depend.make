@@ -938,6 +938,7 @@ CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyP
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
+CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp.o: /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp

@@ -619,9 +619,13 @@ Planet.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
 skybox.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.hpp
+bird.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.hpp
 random
 -
 time.h
+-
+string
 -
 
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.hpp

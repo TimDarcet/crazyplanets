@@ -23,6 +23,12 @@ struct gui_scene_structure
     float freq_gain = 2;
 };
 
+struct trajectory_structure
+{
+    std::vector<vcl::vec3> position;
+    std::vector<float> time;
+};
+
 struct scene_exercise : base_scene_exercise
 {
 
@@ -60,7 +66,12 @@ struct scene_exercise : base_scene_exercise
     std::vector<vcl::mesh_drawable> planets;
 
     vcl::mesh_drawable skybox;
-
+    vcl::mesh_drawable_hierarchy bird;
+    void display_bird(std::map<std::string,GLuint>& shaders, scene_structure& scene);
+    trajectory_structure trajectory;
+    void update_trajectory();
+    void update_time_trajectory();
+    
     void update_tree_position(std::vector<struct colline> collines);
     vcl::mesh create_terrain();
     void update_terrain();
@@ -74,12 +85,15 @@ struct colline {
   float sigma;
 };
 
-
-
+vcl::vec3 cardinal_spline_interpolation(float t, float t0, float t1, float t2, float t3, const vcl::vec3& p0, const vcl::vec3& p1, const vcl::vec3& p2, const vcl::vec3& p3);
+vcl::vec3 cardinal_spline_derivative_interpolation(float t, float t0, float t1, float t2, float t3, const vcl::vec3& p0, const vcl::vec3& p1, const vcl::vec3& p2, const vcl::vec3& p3);
+vcl::vec3 cardinal_spline_interpolation(const trajectory_structure& trajectory, float t);
+vcl::vec3 cardinal_spline_derivative_interpolation(const trajectory_structure& trajectory, float t);
 vcl::mesh create_tree();
 vcl::mesh create_tree_foliage(float radius, float height, float z_offset, float startHeight);
 vcl::mesh create_cone(float radius, float height, float z_offset);
 vcl::mesh create_cylinder(float radius, float height);
 Planet asteroid_generator();
+size_t index_at_value(float t, const std::vector<float>& vt);
 
 #endif

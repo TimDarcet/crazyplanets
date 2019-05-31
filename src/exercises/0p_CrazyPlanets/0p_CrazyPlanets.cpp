@@ -2,12 +2,17 @@
 #include "0p_CrazyPlanets.hpp"
 #include "Planet.hpp"
 #include "skybox.hpp"
+#include "bird.hpp"
+
 //#include <stdio.h>
 
 #ifdef INF443_0P_CRAZYPLANETS
 #define PI 3.14159265
 #include <random>
 #include <time.h>
+#include <string>
+
+#define BIRD_PRECISION 20
 
 // Add vcl namespace within the current one - Allows to use function from vcl library without explicitely preceeding their name with vcl::
 using namespace vcl;
@@ -58,29 +63,14 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
     texture_skybox = texture_gpu(image_load_png(skybox_texture));
 
     generate_swarm(planets, &asteroid_generator);
+
+    bird=create_bird(BIRD_PRECISION);
+    update_trajectory();
+    timer.t = trajectory.time[1];
+    timer.t_min = trajectory.time[1];
+    timer.t_max = trajectory.time[trajectory.time.size()-2];
 }
 
-
-void scene_exercise::update_tree_position(std::vector<struct colline> collines){
-  std::uniform_int_distribution<int> uni(40, 250);
-  int n_tree = uni(generator);
-  for (int i=0; i<n_tree; i++){
-    bool ok = false;
-    float u, v;
-    while(!ok) {
-      u=distrib(generator);
-      v=distrib(generator);
-
-      ok = true;
-      /*for (vec3 tp : scene_exercise::tree_position) {
-        if (pow((tp[0] - u), 2) + pow((tp[1] - v), 2) < 100) {
-          ok = false;
-        }
-      }*/
-    }
-    scene_exercise::tree_position.push_back(evaluate_terrain(u, v, collines));
-  }
-}
 
 /** This function is called at each frame of the animation loop.
     It is used to compute time-varying argument and perform data data drawing */
@@ -118,6 +108,8 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
 
     display_skybox(shaders, scene);
 
+    display_bird(shaders, scene);
+    
     if( gui_scene.wireframe ){ // wireframe if asked from the GUI
         glPolygonOffset( 1.0, 1.0 );
         terrain.draw(shaders["wireframe"], scene.camera);
@@ -126,6 +118,29 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
         }
     }
 }
+
+
+void scene_exercise::update_tree_position(std::vector<struct colline> collines){
+  std::uniform_int_distribution<int> uni(40, 250);
+  int n_tree = uni(generator);
+  for (int i=0; i<n_tree; i++){
+    bool ok = false;
+    float u, v;
+    while(!ok) {
+      u=distrib(generator);
+      v=distrib(generator);
+
+      ok = true;
+      /*for (vec3 tp : scene_exercise::tree_position) {
+        if (pow((tp[0] - u), 2) + pow((tp[1] - v), 2) < 100) {
+          ok = false;
+        }
+      }*/
+    }
+    scene_exercise::tree_position.push_back(evaluate_terrain(u, v, collines));
+  }
+}
+
 
 // Evaluate height of the terrain for any (u,v) \in [0,1]
 float evaluate_terrain_z(float u, float v, std::vector<struct colline> collines)
@@ -304,6 +319,158 @@ void scene_exercise::display_skybox(std::map<std::string,GLuint>& shaders, scene
 
 }
 
+
+void scene_exercise::display_bird(std::map<std::string,GLuint>& shaders, scene_structure& scene)
+{
+    const float t = timer.t;
+    const vec3 p = cardinal_spline_interpolation(trajectory, t);
+    const vec3 d = normalize(cardinal_spline_derivative_interpolation(trajectory, t));
+
+
+    mat3 R = rotation_between_vector_mat3({1,0,0},d);
+
+    // up vector
+    const vec3 up = {0,0,1};
+    const vec3 up_proj = up-dot(up,d)*d;
+    const vec3 new_up = R*vec3{0,0,1};
+
+    const mat3 twist = rotation_between_vector_mat3(new_up,up_proj);
+    R = twist*R;
+
+    const float theta = std::cos(7*3.14f*timer.t);
+
+    bird.rotation("head") = rotation_from_axis_angle_mat3({0,1,0}, std::cos(2.0f*3.14f*timer.t)/5.0f);
+    move_sheet_wings(bird, t, BIRD_PRECISION, [](float t, float x){return (float) 0.2f*(float)sin(2*PI*t)*(float)sin(0.8f*PI*x) + (float)x * (float)sin(2*PI*t+PI/2);});
+    bird.translation("body") = p;
+    bird.rotation("body") = R;
+    bird.draw(shaders["mesh"], scene.camera);
+}
+
+void scene_exercise::update_trajectory()
+{
+    const size_t N = 12;
+    const float r = 12.0f;
+    for(size_t k=0; k<N; ++k)
+    {
+        const float u = k%(N-3)/(N-3.0f);
+        const vec3 p = {r*std::cos(2*PI*u),r*std::sin(2*PI*u), 10+5.0f*std::cos(4*PI*u)};
+        trajectory.position.push_back(p);
+    }
+
+    update_time_trajectory();
+
+}
+
+void scene_exercise::update_time_trajectory()
+{
+    const float max_time = 10.0f;
+
+    const size_t N = trajectory.position.size();
+    trajectory.time.resize(N);
+
+    float length = 0.0f;
+    for(size_t k=0; k<N-1; ++k)
+    {
+        const vec3& p0 = trajectory.position[k];
+        const vec3& p1 = trajectory.position[k+1];
+        const float L = norm(p1-p0);
+        length += L;
+    }
+
+    trajectory.time[0] = 0.0f;
+    for(size_t k=1; k<N-1; ++k)
+    {
+        const vec3& p0 = trajectory.position[k-1];
+        const vec3& p1 = trajectory.position[k];
+        const float L = norm(p1-p0);
+
+        trajectory.time[k] = trajectory.time[k-1]+L/length * max_time;
+    }
+    trajectory.time[N-1]=max_time;
+
+    timer.t_min = trajectory.time[1];
+    timer.t_max = trajectory.time[trajectory.time.size()-2];
+
+
+}
+
+vec3 cardinal_spline_interpolation(float t, float t0, float t1, float t2, float t3, const vec3& p0, const vec3& p1, const vec3& p2, const vec3& p3)
+{
+    const float sigma = t2-t1;
+
+    const vec3 d1 = (p2-p0)/(t2-t0) * sigma;
+    const vec3 d2 = (p3-p1)/(t3-t1) * sigma;
+
+    const float s = (t-t1)/sigma;
+    const float s2 = s*s;
+    const float s3 = s2*s;
+
+    const vec3 p = (2*s3-3*s2+1)*p1 + (s3-2*s2+s)*d1 + (-2*s3+3*s2)*p2 + (s3-s2)*d2;
+
+    return p;
+}
+vec3 cardinal_spline_derivative_interpolation(float t, float t0, float t1, float t2, float t3, const vec3& p0, const vec3& p1, const vec3& p2, const vec3& p3)
+{
+    const float sigma = t2-t1;
+
+    const vec3 d1 = (p2-p0)/(t2-t0) * sigma;
+    const vec3 d2 = (p3-p1)/(t3-t1) * sigma;
+
+    const float s = (t-t1)/sigma;
+    const float s2 = s*s;
+
+    const vec3 p = (6*s2-6*s)*p1 + (3*s2-4*s+1)*d1 + (-6*s2+6*s)*p2 + (3*s2-2*s)*d2;
+
+    return p;
+}
+vec3 cardinal_spline_interpolation(const trajectory_structure& trajectory, float t)
+{
+    const size_t idx = index_at_value(t, trajectory.time);
+
+    const float t0 = trajectory.time[idx-1];
+    const float t1 = trajectory.time[idx];
+    const float t2 = trajectory.time[idx+1];
+    const float t3 = trajectory.time[idx+2];
+
+    const vec3& p0 = trajectory.position[idx-1];
+    const vec3& p1 = trajectory.position[idx];
+    const vec3& p2 = trajectory.position[idx+1];
+    const vec3& p3 = trajectory.position[idx+2];
+
+    //const vec3 p = linear_interpolation(t,t1,t2,p1,p2);
+    const vec3 p = cardinal_spline_interpolation(t,t0,t1,t2,t3,p0,p1,p2,p3);
+    return p;
+}
+vec3 cardinal_spline_derivative_interpolation(const trajectory_structure& trajectory, float t)
+{
+    const size_t idx = index_at_value(t, trajectory.time);
+
+    const float t0 = trajectory.time[idx-1];
+    const float t1 = trajectory.time[idx];
+    const float t2 = trajectory.time[idx+1];
+    const float t3 = trajectory.time[idx+2];
+
+    const vec3& p0 = trajectory.position[idx-1];
+    const vec3& p1 = trajectory.position[idx];
+    const vec3& p2 = trajectory.position[idx+1];
+    const vec3& p3 = trajectory.position[idx+2];
+
+    const vec3 p = cardinal_spline_derivative_interpolation(t,t0,t1,t2,t3,p0,p1,p2,p3);
+    return p;
+}
+
+size_t index_at_value(float t, const std::vector<float>& vt)
+{
+    const size_t N = vt.size();
+    assert(vt.size()>=2);
+    assert(t>=vt[0]);
+    assert(t<vt[N-1]);
+
+    size_t k=0;
+    while( vt[k+1]<t )
+        ++k;
+    return k;
+}
 
 void scene_exercise::set_gui()
 {

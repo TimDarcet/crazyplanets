@@ -82,16 +82,18 @@ void thick_wings(vcl::mesh_drawable_hierarchy &hier, int precision, vcl::vec3 at
     for (int i=0; i<precision; i++)
     {
         left_wing[i] = vcl::mesh_primitive_smooth_cyl(thickness(i*fact),
-                                                 {-i*fact,0,front((float)i/precision)},
-                                                 {-i*fact,0,back((float)i/precision)});
+                                                      vcl::vec3{front((float)i/precision), (float)-i*fact, 0.0f},
+                                                      vcl::vec3{back((float)i/precision), (float)-i*fact, 0.0f});
+                                                     //  {-i*fact,0,front((float)i/precision)},
+                                                     //  {-i*fact,0,back((float)i/precision)});
         right_wing[i] = vcl::mesh_primitive_smooth_cyl(thickness(i*fact),
-                                                  {i*fact,0,front((float)i/precision)},
-                                                  {i*fact,0,back((float)i/precision)});
-    }
+                                                       vcl::vec3{front((float)i/precision), (float)i*fact, 0.0f},
+                                                       vcl::vec3{back((float)i/precision), (float)i*fact, 0.0f});
+}
 
     
     hier.add_element(left_wing[0], "lwing0", "body", attach);
-    hier.add_element(right_wing[0], "rwing0", "body", reflect(attach, 0));
+    hier.add_element(right_wing[0], "rwing0", "body", reflect(attach, 1));
 
     for (int i=1; i<precision; i++)
     {
@@ -121,8 +123,8 @@ void move_sheet_wings(vcl::mesh_drawable_hierarchy &hier, float t, int precision
     {
         float slope = (mov(t, (float)(i+1)/precision) - mov(t, (float)i/precision)) * precision;
         float angle = atan(slope);
-        hier.rotation(lwing + vcl::to_string(i)) = vcl::rotation_from_axis_angle_mat3({0,0,1}, angle - lastangle);
-        hier.rotation(rwing + vcl::to_string(i)) = vcl::rotation_from_axis_angle_mat3({0,0,-1}, angle - lastangle);
+        hier.rotation(lwing + vcl::to_string(i)) = vcl::rotation_from_axis_angle_mat3({1,0,0}, angle - lastangle);
+        hier.rotation(rwing + vcl::to_string(i)) = vcl::rotation_from_axis_angle_mat3({-1,0,0}, angle - lastangle);
         lastangle = angle;
     }
 }
@@ -131,17 +133,18 @@ vcl::mesh_drawable_hierarchy create_bird(int precision) {
     vcl::mesh_drawable_hierarchy hierarchy;
     
     const float r_body = 0.25f;
-    const vcl::vec3 s_body = {1,1,2};
+    const vcl::vec3 s_body = {1.5,1,0.75};
     const float r_head = 0.15f;
-    const vcl::vec3 s_head = {1,2,1};
-    const vcl::vec3 pos_head = {0,0.75f,0.8f};
+    const vcl::vec3 s_head = {1,1,1};
+    const vcl::vec3 pos_head = {0.75f,0,0.8f};
 
     const float r_eye = 0.03f;
     const vcl::vec3 s_eye = {1,1,1};
     const vcl::vec3 pos_eye_l = {1/2.0f,1/3.0f,1/1.5f};
-    const vcl::vec3 pos_eye_r = {-pos_eye_l.x,pos_eye_l.y,pos_eye_l.z};
+    const vcl::vec3 pos_eye_r = {pos_eye_l.x,-pos_eye_l.y,pos_eye_l.z};
+    const vcl::vec3 pos_beak = {1/2.0f,0.0f,0.0f};
     
-    const vcl::vec3 pos_lwing = {-0.55,0,-0.2};
+    const vcl::vec3 pos_lwing = {-0.5,-0.5,0};
 
 
 
@@ -151,11 +154,16 @@ vcl::mesh_drawable_hierarchy create_bird(int precision) {
     vcl::mesh_drawable eye = vcl::mesh_primitive_ellipsoid(r_eye,{0,0,0},s_eye,20,20);
     eye.uniform_parameter.color = {0,0,0};
 
+    vcl::mesh bird_beak = vcl::mesh_primitive_cone(0.04f, {0,0,0}, {0.2f, 0.0f, -0.2f});
+
     hierarchy.add_element(body, "body", "root");
     hierarchy.add_element(head, "head", "body",r_body*termP(s_body, pos_head));
+    hierarchy.add_element(bird_beak,"beak","head", r_head*termP(s_head, pos_beak));
     hierarchy.add_element(eye, "eye_left", "head",r_head*termP(s_head, pos_eye_l));
     hierarchy.add_element(eye, "eye_right", "head",r_head*termP(s_head, pos_eye_r));
     thick_wings(hierarchy, precision, r_body*termP(s_body, pos_lwing), [](float x){return (float)0.3f*(float)sqrt(1-x);}, [](float x){return 0.03f*(float)sqrt(1-x);}, 2*r_body, [](float x){return 0.12f*(float)pow(1-x, 3);});
+
+    hierarchy.mesh_visual("beak").uniform_parameter.color = {1,0.5f,0};
 
     return hierarchy;
 }
