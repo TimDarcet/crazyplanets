@@ -2,6 +2,7 @@
 #include <random>
 #include <time.h>
 
+#ifdef INF443_0P_CRAZYPLANETS
 // std::uniform_real_distribution<float> distrib(0.0,1.0);
 std::random_device rd2;
 std::default_random_engine generator2(rd2());
@@ -81,3 +82,6 @@ void generate_swarm(std::vector<vcl::mesh_drawable> &plan_swarm, Planet (*planet
         plan_swarm.back().uniform_parameter.shading.specular = 0.0f; // non-specular terrain material
     }
 }
+
+
+#endif

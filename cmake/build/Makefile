@@ -420,6 +420,33 @@ home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation/01_modelisat
 	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation/01_modelisation.cpp.s
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation/01_modelisation.cpp.s
 
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.o
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.o
+
+# target to build an object file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.o:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.o
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.o
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.i: home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.i
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.i
+
+# target to preprocess a source file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.i:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.i
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.i
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.s: home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.s
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.s
+
+# target to generate assembly for a file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.s:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.s
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.s
+
 home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.cpp.o
 
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.o
@@ -501,6 +528,33 @@ home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_texture.c
 	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_texture.cpp.s
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_texture.cpp.s
 
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.o
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.o
+
+# target to build an object file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.o:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.o
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.o
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.i: home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.i
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.i
+
+# target to preprocess a source file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.i:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.i
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.i
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.s: home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.s
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.s
+
+# target to generate assembly for a file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.s:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.s
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.s
+
 home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.cpp.o
 
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.o
@@ -555,6 +609,33 @@ home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpo
 	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.cpp.s
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.cpp.s
 
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.o
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.o
+
+# target to build an object file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.o:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.o
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.o
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.i: home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.i
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.i
+
+# target to preprocess a source file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.i:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.i
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.i
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.s: home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.s
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.s
+
+# target to generate assembly for a file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.s:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.s
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.s
+
 home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.cpp.o
 
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.o
@@ -608,6 +689,33 @@ home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.s: ho
 home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.cpp.s:
 	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.cpp.s
 .PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.cpp.s
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.o
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.o
+
+# target to build an object file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.o:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.o
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.o
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.i: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.i
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.i
+
+# target to preprocess a source file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.i:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.i
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.i
+
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.s: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.s
+
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.s
+
+# target to generate assembly for a file
+home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.s:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.s
+.PHONY : home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.s
 
 home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.o: home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.cpp.o
 
@@ -1866,6 +1974,9 @@ help:
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation/01_modelisation.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation/01_modelisation.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation/01_modelisation.s"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.o"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.i"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.s"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.s"
@@ -1875,18 +1986,27 @@ help:
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_texture.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_texture.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_texture.s"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.o"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.i"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.s"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.s"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.s"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.o"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.i"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.s"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.s"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.s"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.o"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.i"
+	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.s"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.o"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.i"
 	@echo "... home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/skybox.s"

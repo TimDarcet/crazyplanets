@@ -8,4 +8,5 @@
 #include "02_texture/example_billboard.hpp"
 #include "03_animation/example_animated_hierarchy.hpp"
 #include "03_animation/example_interpolation.hpp"
+#include "03_animation_s/03_solution.hpp"
 #include "0p_CrazyPlanets/0p_CrazyPlanets.hpp"

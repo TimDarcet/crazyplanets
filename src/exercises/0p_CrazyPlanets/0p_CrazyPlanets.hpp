@@ -65,7 +65,7 @@ struct scene_exercise : base_scene_exercise
     vcl::mesh create_terrain();
     void update_terrain();
     void display_skybox(std::map<std::string,GLuint>& shaders, scene_structure& scene);
-
+    vcl::timer_interval timer;
 };
 
 struct colline {

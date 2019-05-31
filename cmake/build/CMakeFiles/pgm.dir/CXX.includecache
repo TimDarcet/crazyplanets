@@ -536,6 +536,16 @@ time.h
 ../../exercises/base_exercise/base_exercise.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
 
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp
+01_modelisation_solution.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.hpp
+random
+-
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.hpp
+../../exercises/base_exercise/base_exercise.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
+
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.cpp
 example_billboard.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.hpp
@@ -560,6 +570,16 @@ example_texture.hpp
 ../../exercises/base_exercise/base_exercise.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
 
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp
+02_texture_solution.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.hpp
+random
+-
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.hpp
+../../exercises/base_exercise/base_exercise.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
+
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.cpp
 example_animated_hierarchy.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.hpp
@@ -579,6 +599,16 @@ math.h
 -
 
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.hpp
+../../exercises/base_exercise/base_exercise.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp
+03_solution.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.hpp
+random
+-
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.hpp
 ../../exercises/base_exercise/base_exercise.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
 
@@ -609,6 +639,20 @@ time.h
 -
 
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
+../../vcl/vcl.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
+../../helper_scene.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
+../../exercise_current.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp
+bird.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.hpp
+string.h
+-
+
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.hpp
 ../../vcl/vcl.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
 ../../helper_scene.hpp
@@ -663,6 +707,8 @@ base_exercise/base_exercise.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.hpp
 03_animation/example_interpolation.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.hpp
+03_animation_s/03_solution.hpp
+/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.hpp
 0p_CrazyPlanets/0p_CrazyPlanets.hpp
 /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.hpp
 

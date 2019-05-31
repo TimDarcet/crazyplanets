@@ -219,6 +219,93 @@ CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modeli
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/lodepng/lodepng.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/perlin/perlin.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
+CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp.o
+ ../../external/imgui/imconfig.h
+ ../../external/imgui/imgui.h
+ ../../external/imgui/imgui_impl_glfw.h
+ ../../external/imgui/imgui_impl_opengl3.h
+ ../../src/vcl/core/math/mat/mat3/mat3.hpp
+ ../../src/vcl/core/math/math.hpp
+ ../../src/vcl/core/math/vec/vec2/vec2.hpp
+ ../../src/vcl/core/math/vec/vec3/vec3.hpp
+ ../../src/vcl/core/opengl/curve_gpu/curve_gpu.hpp
+ ../../src/vcl/core/opengl/mesh_gpu/mesh_gpu.hpp
+ ../../src/vcl/core/opengl/segments_gpu/segments_gpu.hpp
+ ../../src/vcl/core/opengl/texture/image/image.hpp
+ ../../src/vcl/core/scene/camera/camera.hpp
+ ../../src/vcl/core/shape/mesh/mesh.hpp
+ ../../src/vcl/external_lib/headers/glad.hpp
+ ../../src/vcl/external_lib/headers/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/external/glad/include/glad/glad.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/external/lodepng/lodepng.h
+ /home/timothee/INF/INF443/CrazyPlanets/external/simplexnoise/simplexnoise1234.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.cpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/01_modelisation_s/01_modelisation_solution.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/core.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_drawable/curve_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_dynamic_drawable/curve_dynamic_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/drawable_uniform/drawable_uniform.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/mesh_drawable/mesh_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/mesh_drawable_hierarchy/mesh_drawable_hierarchy.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/segment_drawable_immediate_mode/segment_drawable_immediate_mode.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/segments_drawable/segments_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/file/file.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/helper.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/string/string.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat2/mat2.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat3/mat3.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat4/mat4.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/math.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/numerics/numerics.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/transformation/transformation.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec2/vec2.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec3/vec3.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec4/vec4.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/curve_gpu/curve_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/debug/opengl_debug.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/mesh_gpu/mesh_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/opengl.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/segments_gpu/segments_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/shader/shader.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/image/image.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/texture.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/texture_gpu/texture_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/uniform/uniform.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/camera/camera.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/camera_control_glfw/camera_control_glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/info/picking_info.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/picking.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/primitives/picking_primitives.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/ray/picking_ray.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/scene.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/screen_motion/screen_motion.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/time_period/time_period.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/time_slider/time_slider.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_loader/mesh_loader.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_loader/obj/obj.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_primitive/mesh_primitive.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_structure/mesh.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/shape.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/external_lib.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/fps_counter/fps_counter.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/window/window.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/glad.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/imgui.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/lodepng.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/simplexnoise.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/imgui/imgui.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/lodepng/lodepng.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/perlin/perlin.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_billboard.cpp.o
  ../../external/imgui/imconfig.h
  ../../external/imgui/imgui.h
@@ -480,6 +567,93 @@ CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_textur
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/lodepng/lodepng.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/perlin/perlin.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
+CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp.o
+ ../../external/imgui/imconfig.h
+ ../../external/imgui/imgui.h
+ ../../external/imgui/imgui_impl_glfw.h
+ ../../external/imgui/imgui_impl_opengl3.h
+ ../../src/vcl/core/math/mat/mat3/mat3.hpp
+ ../../src/vcl/core/math/math.hpp
+ ../../src/vcl/core/math/vec/vec2/vec2.hpp
+ ../../src/vcl/core/math/vec/vec3/vec3.hpp
+ ../../src/vcl/core/opengl/curve_gpu/curve_gpu.hpp
+ ../../src/vcl/core/opengl/mesh_gpu/mesh_gpu.hpp
+ ../../src/vcl/core/opengl/segments_gpu/segments_gpu.hpp
+ ../../src/vcl/core/opengl/texture/image/image.hpp
+ ../../src/vcl/core/scene/camera/camera.hpp
+ ../../src/vcl/core/shape/mesh/mesh.hpp
+ ../../src/vcl/external_lib/headers/glad.hpp
+ ../../src/vcl/external_lib/headers/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/external/glad/include/glad/glad.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/external/lodepng/lodepng.h
+ /home/timothee/INF/INF443/CrazyPlanets/external/simplexnoise/simplexnoise1234.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.cpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture_s/02_texture_solution.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/core.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_drawable/curve_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_dynamic_drawable/curve_dynamic_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/drawable_uniform/drawable_uniform.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/mesh_drawable/mesh_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/mesh_drawable_hierarchy/mesh_drawable_hierarchy.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/segment_drawable_immediate_mode/segment_drawable_immediate_mode.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/segments_drawable/segments_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/file/file.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/helper.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/string/string.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat2/mat2.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat3/mat3.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat4/mat4.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/math.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/numerics/numerics.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/transformation/transformation.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec2/vec2.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec3/vec3.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec4/vec4.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/curve_gpu/curve_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/debug/opengl_debug.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/mesh_gpu/mesh_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/opengl.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/segments_gpu/segments_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/shader/shader.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/image/image.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/texture.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/texture_gpu/texture_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/uniform/uniform.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/camera/camera.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/camera_control_glfw/camera_control_glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/info/picking_info.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/picking.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/primitives/picking_primitives.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/ray/picking_ray.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/scene.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/screen_motion/screen_motion.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/time_period/time_period.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/time_slider/time_slider.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_loader/mesh_loader.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_loader/obj/obj.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_primitive/mesh_primitive.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_structure/mesh.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/shape.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/external_lib.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/fps_counter/fps_counter.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/window/window.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/glad.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/imgui.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/lodepng.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/simplexnoise.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/imgui/imgui.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/lodepng/lodepng.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/perlin/perlin.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
 CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.cpp.o
  ../../external/imgui/imconfig.h
  ../../external/imgui/imgui.h
@@ -590,6 +764,93 @@ CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animat
  /home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.cpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/core.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_drawable/curve_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_dynamic_drawable/curve_dynamic_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/drawable_uniform/drawable_uniform.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/mesh_drawable/mesh_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/mesh_drawable_hierarchy/mesh_drawable_hierarchy.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/segment_drawable_immediate_mode/segment_drawable_immediate_mode.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/segments_drawable/segments_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/file/file.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/helper.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/string/string.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat2/mat2.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat3/mat3.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat4/mat4.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/math.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/numerics/numerics.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/transformation/transformation.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec2/vec2.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec3/vec3.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec4/vec4.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/curve_gpu/curve_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/debug/opengl_debug.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/mesh_gpu/mesh_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/opengl.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/segments_gpu/segments_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/shader/shader.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/image/image.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/texture.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/texture_gpu/texture_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/uniform/uniform.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/camera/camera.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/camera_control_glfw/camera_control_glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/info/picking_info.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/picking.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/primitives/picking_primitives.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/ray/picking_ray.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/scene.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/screen_motion/screen_motion.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/time_period/time_period.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/time_slider/time_slider.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_loader/mesh_loader.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_loader/obj/obj.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_primitive/mesh_primitive.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_structure/mesh.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/shape.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/external_lib.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/fps_counter/fps_counter.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/window/window.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/glad.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/imgui.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/lodepng.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/simplexnoise.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/imgui/imgui.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/lodepng/lodepng.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/perlin/perlin.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
+CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp.o
+ ../../external/imgui/imconfig.h
+ ../../external/imgui/imgui.h
+ ../../external/imgui/imgui_impl_glfw.h
+ ../../external/imgui/imgui_impl_opengl3.h
+ ../../src/vcl/core/math/mat/mat3/mat3.hpp
+ ../../src/vcl/core/math/math.hpp
+ ../../src/vcl/core/math/vec/vec2/vec2.hpp
+ ../../src/vcl/core/math/vec/vec3/vec3.hpp
+ ../../src/vcl/core/opengl/curve_gpu/curve_gpu.hpp
+ ../../src/vcl/core/opengl/mesh_gpu/mesh_gpu.hpp
+ ../../src/vcl/core/opengl/segments_gpu/segments_gpu.hpp
+ ../../src/vcl/core/opengl/texture/image/image.hpp
+ ../../src/vcl/core/scene/camera/camera.hpp
+ ../../src/vcl/core/shape/mesh/mesh.hpp
+ ../../src/vcl/external_lib/headers/glad.hpp
+ ../../src/vcl/external_lib/headers/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/external/glad/include/glad/glad.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/external/lodepng/lodepng.h
+ /home/timothee/INF/INF443/CrazyPlanets/external/simplexnoise/simplexnoise1234.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.cpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/core.hpp
@@ -766,6 +1027,92 @@ CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyP
  /home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.cpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/core.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_drawable/curve_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_dynamic_drawable/curve_dynamic_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/drawable_uniform/drawable_uniform.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/mesh_drawable/mesh_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/mesh_drawable_hierarchy/mesh_drawable_hierarchy.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/segment_drawable_immediate_mode/segment_drawable_immediate_mode.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/segments_drawable/segments_drawable.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/file/file.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/helper.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/helper/string/string.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat2/mat2.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat3/mat3.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/mat/mat4/mat4.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/math.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/numerics/numerics.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/transformation/transformation.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec2/vec2.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec3/vec3.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/math/vec/vec4/vec4.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/curve_gpu/curve_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/debug/opengl_debug.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/mesh_gpu/mesh_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/opengl.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/segments_gpu/segments_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/shader/shader.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/image/image.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/texture.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/texture/texture_gpu/texture_gpu.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/opengl/uniform/uniform.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/camera/camera.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/camera_control_glfw/camera_control_glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/info/picking_info.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/picking.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/primitives/picking_primitives.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/picking/ray/picking_ray.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/scene.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/screen_motion/screen_motion.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/time_period/time_period.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/scene/time_slider/time_slider.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_loader/mesh_loader.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_loader/obj/obj.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_primitive/mesh_primitive.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/mesh/mesh_structure/mesh.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/shape/shape.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/external_lib.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/fps_counter/fps_counter.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/glfw/window/window.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/glad.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/imgui.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/lodepng.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/headers/simplexnoise.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/imgui/imgui.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/lodepng/lodepng.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/external_lib/perlin/perlin.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/vcl/vcl.hpp
+CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp.o
+ ../../external/imgui/imconfig.h
+ ../../external/imgui/imgui.h
+ ../../external/imgui/imgui_impl_glfw.h
+ ../../external/imgui/imgui_impl_opengl3.h
+ ../../src/vcl/core/math/mat/mat3/mat3.hpp
+ ../../src/vcl/core/math/math.hpp
+ ../../src/vcl/core/math/vec/vec2/vec2.hpp
+ ../../src/vcl/core/math/vec/vec3/vec3.hpp
+ ../../src/vcl/core/opengl/curve_gpu/curve_gpu.hpp
+ ../../src/vcl/core/opengl/mesh_gpu/mesh_gpu.hpp
+ ../../src/vcl/core/opengl/segments_gpu/segments_gpu.hpp
+ ../../src/vcl/core/opengl/texture/image/image.hpp
+ ../../src/vcl/core/scene/camera/camera.hpp
+ ../../src/vcl/core/shape/mesh/mesh.hpp
+ ../../src/vcl/external_lib/headers/glad.hpp
+ ../../src/vcl/external_lib/headers/glfw.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/external/glad/include/glad/glad.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/external/lodepng/lodepng.h
+ /home/timothee/INF/INF443/CrazyPlanets/external/simplexnoise/simplexnoise1234.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercise_current.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.cpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/bird.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/helper_scene.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/core.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/vcl/core/drawable/curve_drawable/curve_drawable.hpp
@@ -1113,6 +1460,7 @@ CMakeFiles/pgm.dir/home/timothee/INF/INF443/CrazyPlanets/src/main.cpp.o
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/02_texture/example_texture.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_animated_hierarchy.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation/example_interpolation.hpp
+ /home/timothee/INF/INF443/CrazyPlanets/src/exercises/03_animation_s/03_solution.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/0p_CrazyPlanets.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/0p_CrazyPlanets/Planet.hpp
  /home/timothee/INF/INF443/CrazyPlanets/src/exercises/base_exercise/base_exercise.hpp

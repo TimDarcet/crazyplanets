@@ -32,6 +32,7 @@ char *mPlanet_texture = "data/grass.png";
     It is used to initialize all part-specific data */
 void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure& scene, gui_structure& )
 {
+    timer.scale = 0.5f;
     // Create visual terrain surface
     update_terrain();
     asteroid_texture_id = texture_gpu(image_load_png(asteroid_texture));
@@ -86,6 +87,9 @@ void scene_exercise::update_tree_position(std::vector<struct colline> collines){
 void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_structure& scene, gui_structure& )
 {
     set_gui();
+    timer.update();
+
+    const float t = timer.t;
 
     glEnable( GL_POLYGON_OFFSET_FILL ); // avoids z-fighting when displaying wireframe
 

@@ -1,5 +1,7 @@
 #include "skybox.hpp"
 
+#ifdef INF443_0P_CRAZYPLANETS
+
 vcl::mesh create_skybox()
 {
     float width = 1;
@@ -53,3 +55,7 @@ vcl::mesh create_skybox()
     return skybox;
 
 }
+
+
+
+#endif
