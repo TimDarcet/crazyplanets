@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../exercises/base_exercise/base_exercise.hpp"
+#include "Planet.hpp"
 
 #ifdef INF443_0P_CRAZYPLANETS
 
@@ -10,6 +11,8 @@ struct gui_scene_structure
 {
     bool wireframe = false;
     bool skybox = true;
+    bool swarm = true;
+    
     int precision = 300;
 
     float height = 3.0f;
@@ -49,8 +52,11 @@ struct scene_exercise : base_scene_exercise
     gui_scene_structure gui_scene;
 
     std::vector<vcl::vec3> tree_position;
+    std::vector<vcl::vec3> planets_positions;
 
     std::vector<vcl::mesh_drawable> trees;
+    std::vector<vcl::mesh_drawable> planets;
+
     vcl::mesh_drawable skybox;
 
     void update_tree_position(std::vector<struct colline> collines);
@@ -72,5 +78,6 @@ vcl::mesh create_tree();
 vcl::mesh create_tree_foliage(float radius, float height, float z_offset, float startHeight);
 vcl::mesh create_cone(float radius, float height, float z_offset);
 vcl::mesh create_cylinder(float radius, float height);
+Planet asteroid_generator();
 
 #endif

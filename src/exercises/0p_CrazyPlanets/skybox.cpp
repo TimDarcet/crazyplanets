@@ -2,14 +2,15 @@
 
 vcl::mesh create_skybox()
 {
-    const vcl::vec3 p000 = {-1,-1,-1};
-    const vcl::vec3 p001 = {-1,-1, 1};
-    const vcl::vec3 p010 = {-1, 1,-1};
-    const vcl::vec3 p011 = {-1, 1, 1};
-    const vcl::vec3 p100 = { 1,-1,-1};
-    const vcl::vec3 p101 = { 1,-1, 1};
-    const vcl::vec3 p110 = { 1, 1,-1};
-    const vcl::vec3 p111 = { 1, 1, 1};
+    float width = 1;
+    const vcl::vec3 p000 = {-width,-width,-width};
+    const vcl::vec3 p001 = {-width,-width, width};
+    const vcl::vec3 p010 = {-width, width,-width};
+    const vcl::vec3 p011 = {-width, width, width};
+    const vcl::vec3 p100 = { width,-width,-width};
+    const vcl::vec3 p101 = { width,-width, width};
+    const vcl::vec3 p110 = { width, width,-width};
+    const vcl::vec3 p111 = { width, width, width};
 
     vcl::mesh skybox;
 

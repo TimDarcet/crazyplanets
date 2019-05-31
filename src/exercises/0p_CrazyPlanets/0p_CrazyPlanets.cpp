@@ -54,12 +54,14 @@ void scene_exercise::setup_data(std::map<std::string,GLuint>& , scene_structure&
     skybox.uniform_parameter.shading = {1,0,0};
     skybox.uniform_parameter.rotation = rotation_from_axis_angle_mat3({1,0,0},-3.014f/2.0f);
     texture_skybox = texture_gpu(image_load_png(skybox_texture));
+
+    generate_swarm(planets, &asteroid_generator);
 }
+
 
 void scene_exercise::update_tree_position(std::vector<struct colline> collines){
   std::uniform_int_distribution<int> uni(40, 250);
   int n_tree = uni(generator);
-  std::cout << n_tree << " " << std::endl;
   for (int i=0; i<n_tree; i++){
     bool ok = false;
     float u, v;
@@ -93,7 +95,14 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
     // Display terrain
     glPolygonOffset(1.0, 1.0);
     glBindTexture(GL_TEXTURE_2D, texture_id);
-    terrain.draw(shaders["mesh"], scene.camera);
+    if (!gui_scene.swarm)
+      terrain.draw(shaders["mesh"], scene.camera);
+    else {
+      for (vcl::mesh_drawable p : planets) {
+        p.draw(shaders["mesh"], scene.camera);
+        std::cout << p.uniform_parameter.translation << std::endl;
+      }
+    }
     glBindTexture(GL_TEXTURE_2D, scene.texture_white);
 
     // for (mesh_drawable t : trees) {
@@ -110,8 +119,6 @@ void scene_exercise::frame_draw(std::map<std::string,GLuint>& shaders, scene_str
         }
     }
 }
-
-
 
 // Evaluate height of the terrain for any (u,v) \in [0,1]
 float evaluate_terrain_z(float u, float v, std::vector<struct colline> collines)
@@ -259,6 +266,17 @@ mesh create_tree()
     return cyl;
 }
 
+Planet asteroid_generator() {
+  int precision = 100;
+  float height = 0.8f;
+  float radius = 1.0f;
+  int octave = 7;
+  float persistency = 0.4f;
+  float freq_gain = 2;
+  Planet p(height, radius, octave, persistency, freq_gain, precision);
+  return p;
+}
+
 void scene_exercise::update_terrain() {
   Planet p(gui_scene.height, gui_scene.radius, gui_scene.octave, gui_scene.persistency, gui_scene.freq_gain, gui_scene.precision);
   terrain = p.planet_gpu();
@@ -285,39 +303,42 @@ void scene_exercise::set_gui()
 {
     ImGui::Checkbox("Wireframe", &gui_scene.wireframe);
     ImGui::Checkbox("Skybox", &gui_scene.skybox);
+    ImGui::Checkbox("Multiple planets", &gui_scene.swarm);
     
-    float radius_min = 0.1f;
-    float radius_max = 10.0f;
-    if( ImGui::SliderScalar("Radius", ImGuiDataType_Float, &gui_scene.radius, &radius_min, &radius_max) )
-        update_terrain();
+    if(!gui_scene.swarm) {
+      float radius_min = 0.1f;
+      float radius_max = 10.0f;
+      if( ImGui::SliderScalar("Radius", ImGuiDataType_Float, &gui_scene.radius, &radius_min, &radius_max) )
+          update_terrain();
 
-    int precision_min = 5;
-    int precision_max = 500;
-    if( ImGui::SliderScalar("precision", ImGuiDataType_S32, &gui_scene.precision, &precision_min, &precision_max) )
-        update_terrain();
-    
-    ImGui::Separator();
-    ImGui::Text("Perlin parameters");
+      int precision_min = 5;
+      int precision_max = 500;
+      if( ImGui::SliderScalar("precision", ImGuiDataType_S32, &gui_scene.precision, &precision_min, &precision_max) )
+          update_terrain();
+      
+      ImGui::Separator();
+      ImGui::Text("Perlin parameters");
 
-    float height_min = 0.1f;
-    float height_max = 5.0f;
-    if( ImGui::SliderScalar("Height", ImGuiDataType_Float, &gui_scene.height, &height_min, &height_max) )
-        update_terrain();
+      float height_min = 0.1f;
+      float height_max = 5.0f;
+      if( ImGui::SliderScalar("Height", ImGuiDataType_Float, &gui_scene.height, &height_min, &height_max) )
+          update_terrain();
 
-    int octave_min = 1;
-    int octave_max = 10;
-    if( ImGui::SliderScalar("Octave", ImGuiDataType_S32, &gui_scene.octave, &octave_min, &octave_max) )
-        update_terrain();
+      int octave_min = 1;
+      int octave_max = 10;
+      if( ImGui::SliderScalar("Octave", ImGuiDataType_S32, &gui_scene.octave, &octave_min, &octave_max) )
+          update_terrain();
 
-    float persistency_min = 0.1f;
-    float persistency_max = 2.0f;
-    if( ImGui::SliderScalar("Persistency", ImGuiDataType_Float, &gui_scene.persistency, &persistency_min, &persistency_max) )
-        update_terrain();
+      float persistency_min = 0.1f;
+      float persistency_max = 2.0f;
+      if( ImGui::SliderScalar("Persistency", ImGuiDataType_Float, &gui_scene.persistency, &persistency_min, &persistency_max) )
+          update_terrain();
 
-    float freq_gain_min = 0.1f;
-    float freq_gain_max = 10.0f;
-    if( ImGui::SliderScalar("Frequency gain", ImGuiDataType_Float, &gui_scene.freq_gain, &freq_gain_min, &freq_gain_max) )
-        update_terrain();
+      float freq_gain_min = 0.1f;
+      float freq_gain_max = 10.0f;
+      if( ImGui::SliderScalar("Frequency gain", ImGuiDataType_Float, &gui_scene.freq_gain, &freq_gain_min, &freq_gain_max) )
+          update_terrain();
+    }
 }
 
 
