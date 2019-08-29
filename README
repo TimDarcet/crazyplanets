@@ -29,3 +29,5 @@ By default, a temporary directory build-cmake-Desktop-Default is created (in the
 - Use CMakeLists.txt with Visual Studio
 - Precompiled version of GLFW3 is provided (precompiled/glfw3_win) with win32
 - You need to copy data/ and shaders/ directories in the executable directory
+
+Icon made by Freepik from www.flaticon.com
